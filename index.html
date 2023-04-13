@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link css here only when ccs is not imported in js yet -->
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- <script src="./js/app.js" type="module"></script> -->
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="portfolio du site">
+  <title>portfolio</title>
+  <link rel="stylesheet" href="/sasslib/style.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="p-2  ">
+
+  <header class="mb-2">
+    <nav class="display-f jc-space-between">
+      <img src="/assets/logo.svg" alt="logo">
+      <button class="btn  border-0 bg-black text-white">Free Consultation</button>
+    </nav>
+  </header>
+
+  <main class="height-100 mb-3">
+    <section class="f fd-column mb-4 ">
+      <h1 class="fs-xx-large ta-center f fd-column mb-2"><span>Design solution</span> <span>made easy</span></h1>
+      <p class="ta-center mb-2">
+        With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.
+      </p>
+      <div id="container" class=" height-100 f fd-column tt-capitalize text-white">
+        <section id="graphic" class="height-350px br-50 bg-blue br-sm">
+          <h2> Graphic design</h2>
+        </section>
+        <div id="container-div" class="f jc-space-between ">
+          <section class="br-50 bg-orange br-sm width-45">
+            <h2 class="tt-uppercase">ui/ux</h2>
+          </section>
+          <section class="br-50 bg-pink br-sm width-45">
+            <h2>apps</h2>
+          </section>
+        </div>
+        <section id="illustrations" class="br-50 bg-beige br-sm">
+          <h2>illustrations</h2>
+        </section>
+        <section id="photography" class="br-50 bg-sky-blue br-sm">
+          <h2>photography</h2>
+        </section>
+        <section id="motion" class="br-50 bg-purple br-sm">
+          <h2>motion graphics</h2>
+        </section>
+      </div>
+    </section>
+    <section class="f fd-column ai-center">
+      <img class="mb-2" src="/assets/image-amy.webp" alt="a girl">
+      <h2 class="mb-2 ta-center">I'm Amy , and I'd love to work on your next project</h2>
+      <p class="ta-center mb-2 ">
+        I love working with others to create beautiful design solutions. I’ve designed everything from brand
+        illustrations to complete mobile apps. I’m also handy with a camera!
+      </p>
+      <button class="btn mb-3 bg-beige">Free consultation</button>
+    </section>
+    <section class="f fd-column ai-center">
+      <h2 class="mb-2">My work</h2>
+      <div class="mb-2">
+        <img class=" br-50 " src="/assets/image-slide-1.jpg" alt="slide 1">
+        <img class="display-n br-50 " src="/assets/image-slide-2.jpg" alt="slide 2">
+        <img class="display-n br-50 " src="/assets/image-slide-3.jpg" alt="slide 3">
+        <img class="display-n br-50 " src="/assets/image-slide-4.jpg" alt="slide 4">
+        <img class="display-n br-50 " src="/assets/image-slide-5.jpg" alt="slide 5">
+      </div>
+      <div class="f fd-row ">
+        <img class="mr-1 height-50px bg-black p-1 br-100" src="/assets/arrow-left-solid.svg" alt="left arrow">
+        <img class="ml-1 height-50px bg-black p-1 br-100" src="/assets/arrow-right-solid.svg" alt="right arrow">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class=" br-50 bg-black mb-2 p-3 pb-0 f fd-column ai-center height-400px width-100">
+      <h2 class="text-white m-2 ta-center">Book a call with me</h2>
+      <p class="ta-center text-white ">
+        I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during
+        a free consultation. Then we can move forward from there.
+      </p>
+      <button class="btn bg-beige mt-2">Free consultation </button>
+    </section>
+    <div class="display-f jc-space-between">
+      <img src="/assets/logo.svg" alt="logo">
+      <button class="btn  border-0 bg-black text-white">Free Consultation</button>
+
+    </div>
+  </footer>
+
+</body>
+
 </html>

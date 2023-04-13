@@ -1,0 +1,48 @@
+.f {
+    display: flex;
+}
+
+//flex direction
+$flex-direction: row, row-reverse, column, column-reverse;
+
+@each $val in $flex-direction {
+    .fd-#{$val} {
+        flex-direction: $val;
+    }
+}
+
+//flex warp
+$flex-wrap: nowrap, wrap, wrap-reverse;
+
+@each $val in $flex-wrap {
+    .fw-#{$val} {
+        flex-wrap: $val;
+    }
+}
+
+//justify-content
+$jc: flex-start, flex-end, center, space-between, space-around;
+
+@each $val in $jc {
+    .jc-#{$val} {
+        justify-content: $val;
+    }
+}
+
+//align-content
+$ac: flex-start, flex-end, center, space-between, space-around, space-evenly, stretch;
+
+@each $val in $ac {
+    .ac-#{$val} {
+        align-content: $val;
+    }
+}
+
+//alig  items
+$ai: flex-start, flex-end, center, stretch, baseline;
+
+@each $val in $ai {
+    .ai-#{$val} {
+        align-items: $val;
+    }
+}
