@@ -11,12 +11,36 @@ $flex-direction: row, row-reverse, column, column-reverse;
     }
 }
 
+@each $val in $flex-direction {
+
+    @each $key_break ,
+    $value_break in $breakpoints {
+        .fd-#{$val}-#{$key_break} {
+            @media screen and (min-width:#{$value_break}) {
+                flex-direction: $val;
+            }
+        }
+    }
+}
+
 //flex warp
 $flex-wrap: nowrap, wrap, wrap-reverse;
 
 @each $val in $flex-wrap {
     .fw-#{$val} {
         flex-wrap: $val;
+    }
+}
+
+@each $val in $flex-wrap {
+
+    @each $key_break ,
+    $value_break in $breakpoints {
+        .fw-#{$val}-#{$key_break} {
+            @media screen and (min-width:#{$value_break}) {
+                flex-wrap: $val;
+            }
+        }
     }
 }
 
@@ -29,6 +53,18 @@ $jc: flex-start, flex-end, center, space-between, space-around;
     }
 }
 
+@each $val in $jc {
+
+    @each $key_break ,
+    $value_break in $breakpoints {
+        .jc-#{$val}-#{$key_break} {
+            @media screen and (min-width:#{$value_break}) {
+                justify-content: $val;
+            }
+        }
+    }
+}
+
 //align-content
 $ac: flex-start, flex-end, center, space-between, space-around, space-evenly, stretch;
 
@@ -38,11 +74,35 @@ $ac: flex-start, flex-end, center, space-between, space-around, space-evenly, st
     }
 }
 
+@each $val in $ac {
+
+    @each $key_break ,
+    $value_break in $breakpoints {
+        .ac-#{$val}-#{$key_break} {
+            @media screen and (min-width:#{$value_break}) {
+                align-content: $val;
+            }
+        }
+    }
+}
+
 //alig  items
-$ai: flex-start, flex-end, center, stretch, baseline;
+$ai: flex-start, flex-end, end, start, center, stretch, baseline;
 
 @each $val in $ai {
     .ai-#{$val} {
         align-items: $val;
+    }
+}
+
+@each $val in $ai {
+
+    @each $key_break ,
+    $value_break in $breakpoints {
+        .ai-#{$val}-#{$key_break} {
+            @media screen and (min-width:#{$value_break}) {
+                align-items: $val;
+            }
+        }
     }
 }

@@ -144,7 +144,7 @@ $utilities: (
             "75": $base-border-radius * 2,
             "100": 50%,
         )),
-    "display": ("prefix": "display",
+    "display": ("prefix": "d",
         "values": ("n": none,
             "b": block,
             "f": flex,
@@ -171,5 +171,44 @@ $map in $utilities {
                 #{$property}: $v;
             }
         }
+    }
+}
+
+
+@each $name_utilitie,
+$utilitie in $utilities {
+
+    $prefix: map-get($utilitie, "prefix");
+    $values: map-get($utilitie, "values");
+
+    // @debug $name_utilitie ;
+    // @debug $utilitie ;
+
+
+    // @debug $prefix ;
+    // @debug $values ;
+
+    @each $key,
+    $value in $values {
+        // @debug $key ;
+        // @debug $value;
+        // @debug #{$prefix}-#{$key};
+
+        @each $key_break ,
+        $value_break in $breakpoints {
+            // @debug $key_break;
+            // @debug $value_break ;
+            // @debug #{$prefix}-#{$key};
+
+            // @debug #{$name_utilitie}-#{$value};
+
+
+            .#{$prefix}-#{$key}-#{$key_break} {
+                @media screen and (min-width:#{$value_break}) {
+                    #{$name_utilitie} :#{$value};
+                }
+            }
+        }
+
     }
 }
